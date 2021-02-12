@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculador de Gorjetas - OneBitCode</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js"></script>
+</head>
+<body>
+    <div id="container">
+        <div class="title">
+            <h1>Calculadora de Gorjetas</h1>
+        </div>
+        <div>
+            <form class="tips-form" id="tips-form">
+                <label for="bill">
+                    <p><i class="fas fa-file-invoice-dollar"></i>Valor da conta</p>
+                </label>
+                <p>
+                    R$ <input type="number" placeholder="0" name="bill" id="bill" class="input-form">
+                </p>
+                <label for="service-qual">
+                    <p><i class="fas fa-concierge-bell"></i>Avalie o seu serviço</p>
+                </label>
+                <p>
+                    <select name="service-qual" id="service-qual">
+                        <option value="0" disabled selected>Escolha uma Opção</option>
+                        <option value="0.30">30% - Incrível</option>
+                        <option value="0.20">20% - Bom</option>
+                        <option value="0.15">15% - Satisfatório</option>
+                        <option value="0.10">10% - Ruim</option>
+                        <option value="0.05">05% - Péssimo</option>
+                    </select>
+                </p>
+                <label for="people">
+                    <p><i class="fas fa-users"></i>Pessoas pagando</p>
+                </label>
+                <p>
+                    <input type="number" name="people" placeholder="1" id="people" class="input-form"> 
+                </p>
+                <p>Pessoa(s)</p>
+                <button type="submit">Calcular</button>
+            </form>
+        </div>
+        <div id="total-tip">
+            Gorjeta total:
+            R$<span id="tip">0.00</span>
+            <p id="each">Por pessoa</p>
+        </div>
+    </div>
+    <script type="text/javascript" src="scripts.js"></script>
+</body>
+</html>
